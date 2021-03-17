@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "decayingVorton.C": "cpp",
-        "decayingTurbulenceFvPatchVectorField.C": "cpp"
-    }
-}
