@@ -37,7 +37,7 @@ public:
         shoesMap->insert(make_pair(name, obj));
     }
 private:
-    static unordered_map<string, Shoes*> *shoesMap; 
+    static unordered_map<string, Shoes*> *shoesMap;
 };
 
 unordered_map<string, Shoes*> * Shoes::shoesMap = nullptr;
