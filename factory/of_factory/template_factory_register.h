@@ -36,6 +36,7 @@ public:
     {
         shoesMap->insert(make_pair(name, obj));
     }
+private:
     static unordered_map<string, Shoes*> *shoesMap; 
 };
 
@@ -86,7 +87,7 @@ public:
     {
         clotheMap->insert(make_pair(name, obj));
     }
-
+private:
     static unordered_map<string, Clothe*> *clotheMap; 
 };
 unordered_map<string, Clothe*> * Clothe::clotheMap = nullptr;
@@ -107,14 +108,14 @@ const string UniqloClothe::typeName = "Uniqlo";
 
 
 template<class abstractType, class concreteType>
-class addConstructToMap
+class addConstructorToMap
 {
 public:
     static concreteType *productNew()
     {
         return new concreteType;
     }
-    addConstructToMap(const string &lookup = concreteType::typeName)
+    addConstructorToMap(const string &lookup = concreteType::typeName)
     {
         abstractType::initMap();
         abstractType::insertMap(lookup, productNew());
@@ -122,5 +123,5 @@ public:
 };
 
 
-static addConstructToMap<Shoes, NiKeShoes> addNIKEShoesToTable;
-static addConstructToMap<Clothe, UniqloClothe> addUniqloClotheToTable;
+static addConstructorToMap<Shoes, NiKeShoes> addNIKEShoesToTable;
+static addConstructorToMap<Clothe, UniqloClothe> addUniqloClotheToTable;
