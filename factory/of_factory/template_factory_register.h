@@ -106,7 +106,6 @@ public:
 const string UniqloClothe::typeName = "Uniqlo";
 
 
-
 template<class abstractType, class concreteType>
 class addConstructorToMap
 {
