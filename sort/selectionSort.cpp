@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
-vector<int> nums = {1, 2, 5, 6, 3, 1, 4, 3};
+#include "randomNumGenerator.h"
 
 int main()
 {
@@ -17,6 +13,5 @@ int main()
                 minIndex = j;
         swap(nums[i], nums[minIndex]);
     }
-    for(auto &it : nums)
-        cout << it << " ";
+    display();
 }
